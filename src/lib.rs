@@ -10,6 +10,7 @@ use std::{fs::File, io::Write};
 
 pub type Result<T> = std::result::Result<T, error::Error>;
 
+/// Create client, get response and total data size
 async fn create_client(url: &str) -> Result<(Client, Response, u64)> {
     let client = Client::new();
     let response = client
@@ -80,7 +81,6 @@ where
 ///
 /// # Example
 /// ```
-/// use std::cmp::min;
 /// use downloader_rs::{
 ///     downloader,
 ///     error::Error,

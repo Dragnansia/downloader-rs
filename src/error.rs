@@ -1,6 +1,5 @@
-use std::io::ErrorKind;
-
 use reqwest::{StatusCode, Url};
+use std::io::ErrorKind;
 
 pub enum Error {
     Url(Option<Url>),
